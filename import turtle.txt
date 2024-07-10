@@ -1,0 +1,29 @@
+import turtle
+
+# Membuat sebuah objek Turtle
+t = turtle.Turtle()
+
+# Mengatur kecepatan gambar
+t.speed(1)
+
+# Menggambar kelopak bunga
+def draw_petal():
+    for i in range(2):
+        t.circle(50, 60)
+        t.circle(50, 120)
+
+# Menggambar bunga dengan 6 kelopak
+for _ in range(6):
+    draw_petal()
+    t.left(60)
+
+# Menggambar tangkai bunga
+t.penup()
+t.goto(0, -150)
+t.pendown()
+t.setheading(90)
+t.color("green")
+t.forward(200)
+
+# Menutup jendela Turtle saat di-klik
+turtle.done()
